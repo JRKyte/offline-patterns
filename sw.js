@@ -1,44 +1,26 @@
-// Chrome's currently missing some useful cache methods,
-// this polyfill adds them.
+// Polyfill Chrome's cache methods
 importScripts('serviceworker-cache-polyfill.js');
 
-// Here comes the install event!
-// This only happens once, when the browser sees this
-// version of the ServiceWorker for the first time.
+// Install the service worker
 self.addEventListener('install', function(event) {
-  // We pass a promise to event.waitUntil to signal how 
-  // long install takes, and if it failed
+  // Pass a promise to event.waitUntil
   event.waitUntil(
-    // We open a cache…
-    caches.open('simple-sw-v1').then(function(cache) {
-      // And add resources to it
+    caches.open('v1:0:2').then(function(cache) {
       return cache.addAll([
         './',
-        'style.css',
-        'logging.js',
-        // Cache resources can be from other origins.
-        // This is a no-cors request, meaning it doesn't need
-        // CORS headers to be stored in the cache
-        new Request('https://farm6.staticflickr.com/5594/14749918329_888df4f2ef.jpg', {mode: 'no-cors'})
+        'styles/style.css',
+        'scripts/script.js'
       ]);
     })
   );
 });
 
-// The fetch event happens for the page request with the
-// ServiceWorker's scope, and any request made within that
-// page
+// Fetch assets from the cache
 self.addEventListener('fetch', function(event) {
-  // Calling event.respondWith means we're in charge
-  // of providing the response. We pass in a promise
-  // that resolves with a response object
   event.respondWith(
-    // First we look for something in the caches that
-    // matches the request
+    // Check if the request match something in the cache
     caches.match(event.request).then(function(response) {
-      // If we get something, we return it, otherwise
-      // it's null, and we'll pass the request to
-      // fetch, which will use the network.
+      // If theres a match in the cache - return it, if not, fire off the request to the server
       return response || fetch(event.request);
     })
   );
