@@ -23,7 +23,7 @@ navigator.serviceWorker.getRegistration().then(function(reg) {
         }, 1000);
       }
       else if (installing.state == 'redundant') {
-        console.log("The new worker failed to install - likely an error during install");
+        console.log("The new worker failed to install");
       }
     });
   });

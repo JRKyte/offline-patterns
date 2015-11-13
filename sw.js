@@ -1,5 +1,5 @@
 // Polyfill Chrome's cache methods
-importScripts('serviceworker-cache-polyfill.js');
+importScripts('scripts/serviceworker-cache-polyfill.js');
 
 // Install the service worker
 self.addEventListener('install', function(event) {
@@ -9,7 +9,8 @@ self.addEventListener('install', function(event) {
       return cache.addAll([
         './',
         'styles/style.css',
-        'scripts/script.js'
+        'scripts/script.js',
+        'fonts/'
       ]);
     })
   );

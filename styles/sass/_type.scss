@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'dosis';
+  src: url('../fonts/dosis-regular-webfont.eot');
+  src: url('../fonts/dosis-regular-webfont.eot?#iefix') format('embedded-opentype'),
+     url('../fonts/dosis-regular-webfont.woff2') format('woff2'),
+     url('../fonts/dosis-regular-webfont.woff') format('woff'),
+     url('../fonts/dosis-regular-webfont.ttf') format('truetype'),
+     url('../fonts/dosis-regular-webfont.svg#dosisregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'dosisbold';
+  src: url('../fonts/dosis-semibold-webfont.eot');
+  src: url('../fonts/dosis-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+     url('../fonts/dosis-semibold-webfont.woff2') format('woff2'),
+     url('../fonts/dosis-semibold-webfont.woff') format('woff'),
+     url('../fonts/dosis-semibold-webfont.ttf') format('truetype'),
+     url('../fonts/dosis-semibold-webfont.svg#dosissemibold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+h1, h2, h3 {
+  font-family: 'dosisbold';
+  color: #42CC9D;
+  text-align: center;
+}
+h1 {
+  font-size: 62px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+h2 {
+  font-family: 'dosis';
+  font-size: 24px;
+    color: #5C6167;
+}
+h3 {
+  text-align: left;
+  font-size: 20px;
+  margin-bottom: 7px;
+  margin-top: 15px;
+}
+p {
+  font-size: 18px;
+  line-height: 30px;
+}

@@ -1,0 +1,42 @@
+//
+// Scaffold
+// --------------------------------------------------
+
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  background-color: #EFF3F3;
+  font-family: 'dosis';
+  color: #5C6167;
+}
+img {
+  max-width: 100%;
+}
+.row {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+  &:after, &:before {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+.col-3 {
+  padding: 0 15px;
+  width: 25%;
+  float: left;
+}
+.col-9 {
+  padding: 0 15px;
+  width: 75%;
+  float: left;
+}

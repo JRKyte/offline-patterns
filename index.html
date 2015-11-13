@@ -1,18 +1,37 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Super Simple ServiceWorker</title>
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="styles/style.css">
+    <title>Offline Pattern Library</title>
+    <meta content='width=device-width' name='viewport'>
+    <link href='styles/style.css' rel='stylesheet'>
   </head>
   <body>
-    <h1>Super simple ServiceWorker</h1>
-    <script src="scripts/script.js"></script>
-    <script>
-      // Register ServiceWorker
-      navigator.serviceWorker.register('sw.js', {
-        scope: './'
-      });
-    </script>
+    <div class='hero'>
+      <div class='row'>
+        <h1>Offline pattern library</h1>
+        <h2>A collection of layout components built using flexbox, which gracefully fallback in unsupported browsers</h2>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col-3'>
+        <h3>Cards</h3>
+        <p>Cards that will display at a uniform height regardless of how much content they contain.</p>
+      </div>
+      <div class='col-9'>
+        <div class='card-container'>
+          <div class='card-outer'>
+            <div class='card'></div>
+          </div>
+          <div class='card-outer'>
+            <div class='card'></div>
+          </div>
+          <div class='card-outer'>
+            <div class='card'></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Scripts -->
+    <script src='scripts/script.js'></script>
   </body>
 </html>

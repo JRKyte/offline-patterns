@@ -1,0 +1,31 @@
+!!!
+%html
+  %head
+    %title Offline Pattern Library
+    %meta{:content => "width=device-width", :name => "viewport"}
+    %link{:href => "styles/style.css", :rel => "stylesheet"}
+  %body
+    .hero
+      .row
+        %h1 Offline pattern library
+        %h2 A collection of layout components built using flexbox, which gracefully fallback in unsupported browsers
+
+    .row
+      .col-3
+        %h3 Cards
+        %p Cards that will display at a uniform height regardless of how much content they contain.
+      .col-9
+        .card-container
+          .card-outer
+            .card
+          .card-outer
+            .card
+          .card-outer
+            .card
+    //Scripts
+    %script{:src => "scripts/script.js"}
+    -# :javascript
+    -#   // Register ServiceWorker
+    -#   navigator.serviceWorker.register('sw.js', {
+    -#     scope: './'
+    -#   });
