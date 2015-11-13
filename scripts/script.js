@@ -1,3 +1,5 @@
+var serviceWorkerNotify = document.getElementById("sw-alert");
+
 if (!navigator.serviceWorker.controller) {
   console.log("This page is not controlled by a ServiceWorker");
 }

@@ -5,12 +5,14 @@
     %meta{:content => "width=device-width", :name => "viewport"}
     %link{:href => "styles/style.css", :rel => "stylesheet"}
   %body
+    #sw-alert
+      This page is now available offline
     .hero
       .row
         %h1 Offline pattern library
         %h2 A collection of layout components built using flexbox, which gracefully fallback in unsupported browsers
 
-    .row
+    .row.example-container
       .col-3
         %h3 Cards
         %p Cards that will display at a uniform height regardless of how much content they contain.
@@ -37,10 +39,40 @@
                 .card__content
                 .card__content
                 .card__content.card__content--short
+
+    .row.example-container
+      .col-3
+        %h3 Cards
+        %p Cards that will display at a uniform height regardless of how much content they contain.
+      .col-9
+        .card-container
+          .card-outer
+            .card
+              .card__photo
+              .card__inner
+                .card__content
+                .card__content.card__content--short
+          .card-outer
+            .card
+              .card__photo
+              .card__inner
+                .card__content
+                .card__content
+                .card__content
+                .card__content.card__content--short
+          .card-outer
+            .card
+              .card__photo
+              .card__inner
+                .card__content
+                .card__content
+                .card__content.card__content--short
+
     //Scripts
     %script{:src => "scripts/script.js"}
-    -# :javascript
-    -#   // Register ServiceWorker
-    -#   navigator.serviceWorker.register('sw.js', {
-    -#     scope: './'
-    -#   });
+    :javascript
+      // Register ServiceWorker
+      navigator.serviceWorker.register('sw.js', {
+        scope: './'
+      });
+    %script{:src => "logging.js"}

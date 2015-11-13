@@ -1,0 +1,1 @@
+var serviceWorkerNotify=document.getElementById("sw-alert");navigator.serviceWorker.controller?console.log("You can view this page offline"):console.log("This page is not controlled by a ServiceWorker");

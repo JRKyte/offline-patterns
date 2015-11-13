@@ -5,7 +5,7 @@ importScripts('scripts/serviceworker-cache-polyfill.js');
 self.addEventListener('install', function(event) {
   // Pass a promise to event.waitUntil
   event.waitUntil(
-    caches.open('v1:0:2').then(function(cache) {
+    caches.open('v1:0:5').then(function(cache) {
       return cache.addAll([
         './',
         'styles/style.css',
