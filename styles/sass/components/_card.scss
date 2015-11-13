@@ -11,7 +11,24 @@
 .card {
   background-color: white;
   border-radius: 4px;
-  height: 200px;
-  border: 1px solid #5C6167;
   width: 100%;
+  overflow: hidden;
+}
+
+// For styling only
+
+.card__photo {
+  background-color: #B1ECD8;
+  height: 120px;
+}
+.card__inner {
+  padding: 15px;
+}
+.card__content {
+  height: 15px;
+  background-color: #B1ECD8;
+  margin-bottom: 10px;
+}
+.card__content--short {
+  width: 75%;
 }
