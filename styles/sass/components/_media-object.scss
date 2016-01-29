@@ -1,0 +1,19 @@
+.media {
+  display: flex;
+  overflow: hidden;
+  margin: 0 0 20px;
+}
+.media__object {
+  display: block;
+  padding: 0 10px 0 0;
+  img {
+    max-width: none;
+  }
+}
+.media__body {
+  display: table-cell;
+  flex: 1;
+  vertical-align: top;
+  width: 10000px;
+  overflow: hidden;
+}

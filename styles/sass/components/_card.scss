@@ -1,22 +1,27 @@
+// These cards will show at equal height to their siblings, where flexbox is not supported, they will display in rows, at varying heights and align to the top.
+
 .card-container {
   display: flex;
   flex-wrap: wrap;
 }
 .card-outer {
-  float: left;
-  width: 33%;
+  display: inline-block;
   display: flex;
+  width: 33%;
   padding: 0 15px;
+  margin: 0 0 30px;
+  vertical-align: top;
 }
 .card {
-  background-color: white;
-  border-radius: 4px;
   width: 100%;
-  overflow: hidden;
 }
 
 // For styling only
 
+.card {
+  background-color: white;
+  border-radius: 4px;
+}
 .card__photo {
   background-color: #B1ECD8;
   height: 120px;

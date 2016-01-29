@@ -39,34 +39,23 @@
                 .card__content
                 .card__content
                 .card__content.card__content--short
+          .card-outer
+            .card
+              .card__photo
+              .card__inner
+                .card__content
+                .card__content.card__content--short
 
     .row.example-container
       .col-3
-        %h3 Cards
-        %p Cards that will display at a uniform height regardless of how much content they contain.
+        %h3 Media object
+        %p Used for displaying an image to one side, with descriptive content to the other.
       .col-9
-        .card-container
-          .card-outer
-            .card
-              .card__photo
-              .card__inner
-                .card__content
-                .card__content.card__content--short
-          .card-outer
-            .card
-              .card__photo
-              .card__inner
-                .card__content
-                .card__content
-                .card__content
-                .card__content.card__content--short
-          .card-outer
-            .card
-              .card__photo
-              .card__inner
-                .card__content
-                .card__content
-                .card__content.card__content--short
+        .media
+          %a{href: '#', class: 'media__object media__object--left'}
+            %img{src: 'http://placehold.it/60x60'}
+          .media__body
+            Nullam quis risus eget urna mollis ornare vel eu leo. Cras mattis consectetur purus sit amet fermentum. Etiam porta sem malesuada magna mollis euismod. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
 
     //Scripts
     %script{:src => "scripts/script.js"}
